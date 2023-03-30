@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    height: 13px;
+    background-color: gray;
+    height: 33px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    color: aliceblue;
+    font-family: 'Orbitron', sans-serif;
+    padding: 0px 8px;
+}
+
+.line {
+    background-color: rgba(245, 0, 0, 0.959);
+    height: 3px;
+    width: 0;
+    border-radius: 12px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+.gamecontainer {
+    display: flex;
+    justify-content: center;
+    /* background-color: blue; */
+    margin-top: 13px;
+    position: relative;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: 'Oswald', sans-serif;
+}
+
+.box {
+    border: 1px solid black;
+    font-size: 5vw;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box:hover {
+    background-color: rgb(200, 179, 221);
+}
+
+.gameinfo {
+    padding-left: 34px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.imgbox img {
+    /* height: 140px; */
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+.info {
+    font-size: 22px;
+    font-family: 'Orbitron';
+    /* font-weight: bold; */
+}
+
+.gameinfo_2 {
+    margin-top: 18px;
+}
+
+#reset {
+    height: 31px;
+    width: 70px;
+    font-size: 17px;
+    border-radius: 21px;
+    margin-left: 13px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    background-color: #ebd0d0;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw)
+    }
+    .gamecontainer {
+        flex-wrap: wrap;
+    }
+    .gameinfo {
+        margin-top: 30px;
+    }
+    .gameinfo_2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 48px;
+    }
+    #reset {
+        margin-top: 13px;
+    }
+    .imgbox img {
+        margin: 0px 34px 33px 38px;
+    }
+}
